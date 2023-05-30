@@ -1,5 +1,6 @@
 import styled, { ThemeProvider } from 'styled-components'
 import { defaultTheme } from './styles/themes/default'
+import { GlobalStyle } from './styles/themes/global'
 
 import { HeartBreak } from 'phosphor-react'
 
@@ -14,6 +15,7 @@ function App() {
     <ThemeProvider theme={defaultTheme}>
       <Container>oi, sou mó legal! confia ✌️</Container>
       <HeartBreak size={24} color="#4B2995" />
+      <GlobalStyle />
     </ThemeProvider>
   )
 }
