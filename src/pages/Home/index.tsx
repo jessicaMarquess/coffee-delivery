@@ -12,7 +12,9 @@ import {
   IconContainer,
   ItemContainer,
   BodyContainer,
+  ItemsCoffee,
 } from './style'
+import { CoffeeCard } from './components/CoffeeCard'
 
 export const Home = () => {
   return (
@@ -78,6 +80,10 @@ export const Home = () => {
           />
         </ImageCoffeeDelivery>
       </BodyContainer>
+      <ItemsCoffee>
+        <h1>Nossos cafés</h1>
+        <CoffeeCard />
+      </ItemsCoffee>
     </>
   )
 }

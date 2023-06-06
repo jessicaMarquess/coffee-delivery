@@ -36,7 +36,7 @@ export const LocaleContainer = styled.div`
 `
 export const BodyContainer = styled.body`
   display: flex;
-  padding: 5.875rem 10rem;
+  padding: 5.875rem 10rem 5.75rem 10rem;
   gap: 3.5rem;
   justify-content: space-between;
 `
@@ -93,7 +93,15 @@ export const IconContainer = styled.div<IconContainerProps>`
   gap: 8px;
   border-radius: 50%;
   margin-right: 0.75rem;
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   background-color: ${(props) => props.theme[BG_COLOR[props.bgColor]]};
+`
+export const ItemsCoffee = styled.div`
+  padding: 2rem 10rem 100rem 10rem;
+  h1 {
+    font-size: 2rem;
+    color: ${(props) => props.theme['base-subtitle']};
+    padding-bottom: 3.375rem;
+  }
 `
