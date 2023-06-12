@@ -1,43 +1,57 @@
 import { Minus, Plus, ShoppingCart } from 'phosphor-react'
-import americanoImage from '../../../../assets/americano.png'
 import {
-  BackgroundContainer,
+  BoxTags,
   CoffeImg,
   CoffeeDescription,
   CoffeeFooter,
   CoffeeType,
+  Container,
   ContentFooter,
+  ItemCard,
   Price,
   QtddCoffee,
   Tag,
 } from './style'
+import React from 'react'
+import { PropsData } from '../../../../../data.ts'
 
-export const CoffeeCard = () => {
+export const CoffeeCard: React.FC<{ coffeeData: PropsData[] }> = ({
+  coffeeData,
+}) => {
   return (
-    <BackgroundContainer>
-      <CoffeImg src={americanoImage} alt="" />
-      <Tag>Tradicional</Tag>
-      <CoffeeType>Expresso Tradicional</CoffeeType>
-      <CoffeeDescription>
-        O tradicional café feito com água quente e grãos moídos
-      </CoffeeDescription>
-      <CoffeeFooter>
-        <Price>
-          <p>
-            R$ <span>9,90</span>
-          </p>
-        </Price>
-        <ContentFooter>
-          <QtddCoffee>
-            <Minus size={14} color="#8047F8" weight="bold" />
-            <p>1</p>
-            <Plus size={14} color="#8047F8" weight="bold" />
-          </QtddCoffee>
-          <div>
-            <ShoppingCart size={22} weight="fill" />
-          </div>
-        </ContentFooter>
-      </CoffeeFooter>
-    </BackgroundContainer>
+    <Container>
+      {coffeeData.map((coffee) => {
+        return (
+          <ItemCard key={coffee.id}>
+            <CoffeImg src={coffee.src} alt={coffee.descricao} />
+            <BoxTags>
+              {coffee.tags.map((tag) => (
+                <Tag key={tag}>{tag}</Tag>
+              ))}
+            </BoxTags>
+
+            <CoffeeType>{coffee.nome}</CoffeeType>
+            <CoffeeDescription>{coffee.descricao}</CoffeeDescription>
+            <CoffeeFooter>
+              <Price>
+                <p>
+                  R$ <span>{coffee.preco}</span>
+                </p>
+              </Price>
+              <ContentFooter>
+                <QtddCoffee>
+                  <Minus size={14} color="#8047F8" weight="bold" />
+                  <p>1</p>
+                  <Plus size={14} color="#8047F8" weight="bold" />
+                </QtddCoffee>
+                <div>
+                  <ShoppingCart size={22} weight="fill" />
+                </div>
+              </ContentFooter>
+            </CoffeeFooter>
+          </ItemCard>
+        )
+      })}
+    </Container>
   )
 }

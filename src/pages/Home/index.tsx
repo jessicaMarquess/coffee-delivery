@@ -15,6 +15,7 @@ import {
   ItemsCoffee,
 } from './style'
 import { CoffeeCard } from './components/CoffeeCard'
+import dataCoffee from '../../../data'
 
 export const Home = () => {
   return (
@@ -82,7 +83,7 @@ export const Home = () => {
       </BodyContainer>
       <ItemsCoffee>
         <h1>Nossos cafés</h1>
-        <CoffeeCard />
+        <CoffeeCard coffeeData={dataCoffee} />
       </ItemsCoffee>
     </>
   )

@@ -1,4 +1,13 @@
-const dataCoffee = [
+export interface PropsData {
+  id: number
+  nome: string
+  descricao: string
+  preco: number
+  tags: Array<string>
+  src: string
+}
+
+const dataCoffee: PropsData[] = [
   {
     id: 1,
     nome: 'Expresso Tradicional',

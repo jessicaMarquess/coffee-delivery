@@ -1,6 +1,14 @@
 import styled from 'styled-components'
 
-export const BackgroundContainer = styled.div`
+export const Container = styled.div`
+  display: grid;
+  grid-column: 3;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 2.5rem;
+  grid-column-gap: 2rem;
+`
+
+export const ItemCard = styled.div`
   width: 16rem;
   max-height: 19.375rem;
   background-color: ${(props) => props.theme['base-card']};
@@ -14,8 +22,14 @@ export const CoffeImg = styled.img`
   position: absolute;
   margin-top: -1rem;
 `
-export const Tag = styled.p`
+export const BoxTags = styled.div`
+  display: flex;
+  gap: 0.25rem;
   margin-top: 6rem;
+  text-transform: uppercase;
+`
+
+export const Tag = styled.p`
   padding: 0.25rem 0.5rem;
   border-radius: 1rem;
   background-color: ${(props) => props.theme['yellow-light']};
