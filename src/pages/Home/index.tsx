@@ -1,10 +1,6 @@
-import { Coffee, MapPin, Package, ShoppingCart, Timer } from 'phosphor-react'
-import logo from '../../assets/logo.svg'
+import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import imageCoffeeDelivery from '../../assets/imageCoffeeDelivery.png'
 import {
-  Navbar,
-  Header,
-  LocaleContainer,
   IntroContainer,
   PresentationContainer,
   BenefitsContainer,
@@ -20,21 +16,6 @@ import dataCoffee from '../../../data'
 export const Home = () => {
   return (
     <>
-      <Header>
-        <img
-          src={logo}
-          alt="Logo da Coffee Delivery, uma imagem de copo roxo junto com o nome da empresa."
-        />
-        <Navbar>
-          <LocaleContainer>
-            <MapPin size={22} weight="fill" />
-            <p>Porto Alegre, RS</p>
-          </LocaleContainer>
-          <div>
-            <ShoppingCart size={22} weight="fill" />
-          </div>
-        </Navbar>
-      </Header>
       <BodyContainer>
         <IntroContainer>
           <PresentationContainer>
