@@ -8,7 +8,7 @@ export const Header = styled.header`
 export const Navbar = styled.div`
   display: flex;
   gap: 0.75rem;
-  div:last-child {
+  a {
     display: flex;
     background-color: ${(props) => props.theme['yellow-light']};
     color: ${(props) => props.theme['yellow-dark']};
