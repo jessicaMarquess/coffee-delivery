@@ -77,19 +77,6 @@ export const Price = styled.div`
   }
 `
 
-export const QtddCoffee = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.25rem;
-  width: 4.5rem;
-  background-color: ${(props) => props.theme['base-button']};
-  border-radius: 0.375rem;
-
-  p {
-    font-size: 1rem;
-  }
-`
 export const ContentFooter = styled.div`
   display: flex;
   gap: 0.5rem;
@@ -98,6 +85,12 @@ export const ContentFooter = styled.div`
     padding: 0.5rem;
     border-radius: 0.375rem;
     background-color: ${(props) => props.theme['purple-dark']};
-    color: ${(props) => props.theme.white};
+    color: ${(props) => props.theme['base-card']};
+    cursor: pointer;
+
+    &:hover {
+      transition: background-color 0.2s ease-in;
+      background-color: ${(props) => props.theme['purple-normal']};
+    }
   }
 `

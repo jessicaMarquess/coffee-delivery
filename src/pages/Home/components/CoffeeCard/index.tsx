@@ -1,4 +1,4 @@
-import { Minus, Plus, ShoppingCart } from 'phosphor-react'
+import { ShoppingCart } from 'phosphor-react'
 import {
   BoxTags,
   CoffeImg,
@@ -9,11 +9,11 @@ import {
   ContentFooter,
   ItemCard,
   Price,
-  QtddCoffee,
   Tag,
 } from './style'
 import React from 'react'
 import { PropsData } from '../../../../../data.ts'
+import { QuantidadeItem } from '../../../components/QuantidadeItem/index.tsx'
 
 export const CoffeeCard: React.FC<{ coffeeData: PropsData[] }> = ({
   coffeeData,
@@ -39,11 +39,7 @@ export const CoffeeCard: React.FC<{ coffeeData: PropsData[] }> = ({
                 </p>
               </Price>
               <ContentFooter>
-                <QtddCoffee>
-                  <Minus size={14} color="#8047F8" weight="bold" />
-                  <p>1</p>
-                  <Plus size={14} color="#8047F8" weight="bold" />
-                </QtddCoffee>
+                <QuantidadeItem />
                 <div>
                   <ShoppingCart size={22} weight="fill" />
                 </div>
